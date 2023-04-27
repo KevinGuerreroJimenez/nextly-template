@@ -10,10 +10,14 @@ module.exports = {
       colors: {
         trueGray: colors.trueGray,
       },
+      width: {
+        '521': '521px',
+      }
     },
     fontFamily: {
       sans: ["Inter", ...defaultTheme.fontFamily.sans],
       stock: [defaultTheme.fontFamily.sans],
+      blackops: ["Black Ops One", "sans-serif"]
     },
   },
   variants: {

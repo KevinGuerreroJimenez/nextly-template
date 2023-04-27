@@ -1,10 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 
 @layer base {
   html,
   body {
-    @apply dark:bg-trueGray-900;
+    scroll-behavior: smooth;
+    @apply bg-trueGray-900;
   }
+}
+
+.custom-box {
+  min-height: 100%;
+}
+.custom-dashed {
+  background-image: repeating-linear-gradient(45deg, transparent, #494949 1px, transparent 1px, transparent 300px);
+}
+
+.navigation-menu {
+  scroll-behavior: smooth;
 }

@@ -11,6 +11,7 @@ import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
+import Ubicacion from "../components/ubicacion";
 
 //import dynamic from "next/dynamic";
 
@@ -26,12 +27,12 @@ import PopupWidget from "../components/popupWidget";
 
 export default function Home() {
   return (
-    <>
+    <main className="custom-box custom-dashed">
       <Head>
-        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
+        <title>Sentinel Airsoft - Let the war begin</title>
         <meta
           name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
+          content="Sentinel Airsoft es el lugar donde los videojuegos y el airsoft van de la mano."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -39,13 +40,19 @@ export default function Home() {
       <Navbar />
       <Hero />
       <SectionTitle
-        pretitle="Nextly Benefits"
-        title=" Why should you use this landing page">
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+        id="sobrenosotros"
+        pretitle="Conócenos"
+        title="Todo lo que necesitas saber">
+        ¡Bienvenido al mundo del Airsoft al estilo Counter Strike! Si eres un fanático de los videojuegos de disparos, y siempre has soñado con sumergirte en el mundo real de la acción táctica, entonces has llegado al lugar correcto.
+
+Aquí en nuestro negocio, llevamos el concepto de los videojuegos de disparos a la realidad. Ofrecemos partidas de Airsoft que te harán sentir como si estuvieras dentro de tu juego de Counter Strike favorito. ¿Te imaginas ser parte de una misión de rescate de rehenes, proteger una bomba, o incluso ser el último superviviente en una partida Battle Royale?
+
+Nuestro campo de Airsoft ha sido diseñado para crear una experiencia de juego lo más parecida posible a los mapas de Counter Strike, con obstáculos y zonas de combate tácticas que te desafiarán a usar tus habilidades estratégicas para salir victorioso. Además, contamos con réplicas de armas y equipamiento militar de alta calidad, que te harán sentir como un verdadero soldado de élite.
+
+En nuestro negocio, nos enorgullecemos de combinar la emoción de los videojuegos con la realidad del Airsoft. Aquí es donde la realidad y los videojuegos se unen para ofrecerte una experiencia única y emocionante que no encontrarás en ningún otro lugar. ¡Ven a jugar con nosotros y siente la adrenalina de la acción táctica al estilo Counter Strike!
       </SectionTitle>
-      <Benefits data={benefitOne} />
+      <Ubicacion data={benefitOne} />
+      <Benefits data={benefitTwo} />
       <Benefits imgPos="right" data={benefitTwo} />
       <SectionTitle
         pretitle="Watch a video"
@@ -70,6 +77,6 @@ export default function Home() {
       <Cta />
       <Footer />
       <PopupWidget />
-    </>
+    </main>
   );
 }
