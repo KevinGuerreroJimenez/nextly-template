@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Container from "./container";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Ubicacion(props) {
   const { data } = props;
@@ -24,7 +25,7 @@ export default function Ubicacion(props) {
           }`}>
           <div>
             <div className="flex flex-col w-full mt-4">
-              <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight lg:leading-tight lg:text-4xl text-white">
+              <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-wide lg:leading-tight lg:text-4xl text-white font-blackops">
                 {data.title}
               </h3>
 
@@ -54,12 +55,10 @@ function Benefit(props) {
     <>
       <div className="flex items-start mt-8 space-x-3">
         <div className="flex items-center justify-center flex-shrink-0 mt-1 bg-red-700 rounded-md w-11 h-11 ">
-          {React.cloneElement(props.icon, {
-            className: "w-7 h-7 text-white",
-          })}
+          <div className="w-6 h-6">{props.icon}</div>
         </div>
         <div>
-          <h4 className="text-xl font-medium text-gray-200">
+          <h4 className="text-xl font-medium text-gray-200 font-blackops">
             {props.title}
           </h4>
           <p className="mt-1 text-gray-400">

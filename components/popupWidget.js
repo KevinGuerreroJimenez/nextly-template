@@ -15,10 +15,9 @@ export default function PopupWidget() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [Message, setMessage] = useState("");
 
-  const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
+  const userName = useWatch({ control, name: "name", defaultValue: "Alguien" });
 
   const onSubmit = async (data, e) => {
-    console.log(data);
     await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
@@ -31,7 +30,7 @@ export default function PopupWidget() {
         let json = await response.json();
         if (json.success) {
           setIsSuccess(true);
-          setMessage(json.message);
+          setMessage("Responderemos lo antes posible");
           e.target.reset();
           reset();
         } else {
@@ -41,8 +40,7 @@ export default function PopupWidget() {
       })
       .catch((error) => {
         setIsSuccess(false);
-        setMessage("Client Error. Please check the console.log for more info");
-        console.log(error);
+        setMessage("Se ha producido un error. Disculpa las molestias.");
       });
   };
 
@@ -116,12 +114,12 @@ export default function PopupWidget() {
                     <form onSubmit={handleSubmit(onSubmit)} noValidate>
                       <input
                         type="hidden"
-                        value="YOUR_ACCESS_KEY_HERE"
+                        value="0a969869-bb7d-464b-9517-3b53a8d64b45"
                         {...register("apikey")}
                       />
                       <input
                         type="hidden"
-                        value={`${userName} sent a message from Sentinel Airsoft`}
+                        value={`${userName} ha enviado un mensaje desde la web de Sentinel Airsoft`}
                         {...register("subject")}
                       />
                       <input
@@ -246,20 +244,6 @@ export default function PopupWidget() {
                           )}
                         </button>
                       </div>
-                      <p
-                        className="text-xs text-center text-gray-400"
-                        id="result">
-                        <span>
-                          Powered by{" "}
-                          <a
-                            href="https://Web3Forms.com"
-                            className="text-gray-600"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            Web3Forms
-                          </a>
-                        </span>
-                      </p>
                     </form>
                   )}
 
@@ -286,7 +270,7 @@ export default function PopupWidget() {
                         <button
                           className="mt-6 text-red-700 focus:outline-none"
                           onClick={() => reset()}>
-                            Volver
+                            Atrás
                         </button>
                       </div>
                     </>
@@ -315,7 +299,7 @@ export default function PopupWidget() {
                       <button
                         className="mt-6 text-red-700 focus:outline-none"
                         onClick={() => reset()}>
-                          Volver
+                          Atrás
                       </button>
                     </div>
                   )}

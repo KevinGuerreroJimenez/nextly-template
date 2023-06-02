@@ -9,7 +9,7 @@ export default function Hero() {
       <Container className="flex flex-wrap">
         <div className="flex items-center w-full lg:w-1/2 pt-6">
           <div className="max-w-2xl mb-8">
-            <h1 className="font-blackops text-2xl font-bold leading-snug tracking-wide lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight text-white relative z-10">
+            <h1 className="font-blackops text-4xl font-bold leading-snug tracking-wide lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight text-white relative z-10">
               <span className="z-10">¡Prepárate para la acción!</span>
               <div className="hidden md:flex absolute opacity-60 -top-10 left-72 -z-10">
                 <Image
@@ -18,7 +18,6 @@ export default function Hero() {
                     width="300"
                     height="300"
                     alt="Airsoft soldier Illustration"
-                    layout="intrinsic"
                     loading="eager"
                     placeholder="blur"
                   />
@@ -30,7 +29,6 @@ export default function Hero() {
                     width="200"
                     height="200"
                     alt="Airsoft soldier Illustration"
-                    layout="intrinsic"
                     loading="eager"
                     placeholder="blur"
                   />
@@ -71,7 +69,6 @@ export default function Hero() {
               width="850"
               height="851"
               alt="Airsoft soldier Illustration"
-              layout="intrinsic"
               loading="eager"
               placeholder="blur"
             />
@@ -86,7 +83,7 @@ export default function Hero() {
             Ya contamos con la confianza de <span className="text-red-600">2000+</span>{" "}seguidores de Airsoft en nuestras redes, ¡sé parte de nuestra comunidad y vive la emoción de la acción táctica!
           </div>
 
-          <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around">
+          {/* <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around">
             <div className="pt-2 text-gray-400">
               <AmazonLogo />
             </div>
@@ -102,7 +99,7 @@ export default function Hero() {
             <div className="pt-2 text-gray-400">
               <SonyLogo />
             </div>
-          </div>
+          </div> */}
         </div>
       </Container>
     </>
